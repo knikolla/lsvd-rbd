@@ -69,5 +69,5 @@ clean:
 all: release paper
 
 install-deps:
-	sudo apt install libfmt-dev libaio-dev librados-dev mold libgoogle-perftools-dev libtcmalloc-minimal4
-
+	sudo apt install -y libfmt-dev libaio-dev librados-dev mold libgoogle-perftools-dev libtcmalloc-minimal4 \
+		build-essential clang-15 libboost-all-dev zlib1g-dev uuid-dev valgrind liburing-dev
