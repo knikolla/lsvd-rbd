@@ -3,8 +3,6 @@ cxx = meson.get_compiler('cpp')
 cmake = import('cmake')
 # cmvars = cmake.subproject_options()
 # cmvars.add_cmake_defines({'POSITION_INDEPENDENT_CODE': true})
-folly_cm = cmake.subproject('folly')
-libfolly = folly_cm.dependency('folly')
 
 lsvd_src = files(
 	'config.cc',
@@ -22,7 +20,6 @@ lsvd_src = files(
 
 lsvd_inc = include_directories('.')
 lsvd_deps = [
-	libfolly,
 	dependency('threads'),
 	dependency('zlib'),
 	dependency('fmt'),
